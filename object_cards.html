@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .Drinks {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .Drink {
+            width: 33.33%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Drinks">
+            <div class="Drink">
+                <img src="https://s.yimg.com/ut/api/res/1.2/VHXsYL9UbMhmCE1EhxhzJQ--~B/YXBwaWQ9eXR3bWFsbDtjYz0zMTUzNjAwMDtoPTYwMDtxPTgxO3c9NjAw/https://s.yimg.com/fy/dd45/item/p067085698783-item-531exf4x0500x0500-m.jpg" alt="">
+                <h1>阿隆姆奶茶</h1>
+                <p></p>            
+                <p>CC數:$600CC</p>
+                <p>價格:$35</p>
+            </div>
+            <div class="Drink">
+                <img src="https://tshop.r10s.com/743/eb0/1729/7e8d/4108/5129/750b/11dfe787262c600c7376cd.jpg" alt="">
+                <h1>茶裏王烏龍茶</h1>
+                
+                <p>CC數:$975CC</p>
+                <p>價格:$32</p>
+            </div>
+            <div class="Drink">
+                <img src="https://tshop.r10s.com/55a/1c4/ec60/0aeb/70ae/04df/dbc6/1141e88dc654ab3a295add.jpg" alt="">
+                <h1>蘆筍汁</h1>
+                
+                <p>CC數:$600CC</p>
+                <p>價格:$20</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var cards = document.querySelector(".Drinks");
+        // var Drinks_a = {
+        //     brands: "全家",
+        //     cc: 600,
+        //     sugar: 1,
+        //     milk: 0,
+        //     price: 35,
+        //     img: 'https://s.yimg.com/ut/api/res/1.2/VHXsYL9UbMhmCE1EhxhzJQ--~B/YXBwaWQ9eXR3bWFsbDtjYz0zMTUzNjAwMDtoPTYwMDtxPTgxO3c9NjAw/https://s.yimg.com/fy/dd45/item/p067085698783-item-531exf4x0500x0500-m.jpg'
+        // };
+
+        // var Drinks_b = {
+        //     brands: "7-11",
+        //     cc: 975,
+        //     sugar: 1,
+        //     milk: 0,
+        //     price: 32,
+        //     img: 'hhttps://tshop.r10s.com/743/eb0/1729/7e8d/4108/5129/750b/11dfe787262c600c7376cd.jpg'
+        // };
+
+        // var Drinks_c = {
+        //     brands: "萊爾富",
+        //     cc: 600,
+        //     sugar: 1,
+        //     milk: 0,
+        //     price: 20,
+        //     img: 'https://tshop.r10s.com/55a/1c4/ec60/0aeb/70ae/04df/dbc6/1141e88dc654ab3a295add.jpg'
+        // };
+
+        // var Drinks_array = [Drinks_a,Drinks_b,Drinks_c];
+
+        var Drinks_array = [{
+            brands: "全家",
+            cc: 600,
+            sugar: 1,
+            milk: 0,
+            price: 35,
+            img:  'https://s.yimg.com/ut/api/res/1.2/VHXsYL9UbMhmCE1EhxhzJQ--~B/YXBwaWQ9eXR3bWFsbDtjYz0zMTUzNjAwMDtoPTYwMDtxPTgxO3c9NjAw/https://s.yimg.com/fy/dd45/item/p067085698783-item-531exf4x0500x0500-m.jpg'
+        }, {
+            brands: "7-11",
+            cc: 975,
+            sugar: 1,
+            milk: 0,
+            price: 32,
+            img: 'hhttps://tshop.r10s.com/743/eb0/1729/7e8d/4108/5129/750b/11dfe787262c600c7376cd.jpg'
+        // };
+        },{
+            brands: "萊爾富",
+            cc: 600,
+            sugar: 1,
+            milk: 0,
+            price: 20,
+            img: 'https://tshop.r10s.com/55a/1c4/ec60/0aeb/70ae/04df/dbc6/1141e88dc654ab3a295add.jpg'
+        }];
+
+
+        for (let index = 0; index < Drinks_array.length; index++) {
+            const Drinks = Drinks_array[1];
+            console.log(Drinks.brands);
+        }
+
+
+        Drinks_array.forEach(Drinks => {
+            Drinks.innerHTML += `<div class="Drinks">
+                <img src="./img/蘆筍汁.jpg" alt="">
+                <h1>${Drinks.brands}</h1>
+                <p>加奶不加糖</p>
+                <p>CC數:$350CC</p>
+                <p>價格:$60</p>
+            </div>`;
+        });
+
+
+    </script>
+</body>
+
+</html>
